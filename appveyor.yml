@@ -1,0 +1,17 @@
+version: 1.0.{build}
+image: Visual Studio 2022
+
+# https://trac.ffmpeg.org/ticket/11538
+
+environment:
+  PATH: $(PATH);C:\msys64\mingw64\bin;C:\msys64\usr\bin;C:\msys64\opt\bin
+
+clone_script:
+  - git clone -q --recursive --branch=%APPVEYOR_REPO_BRANCH% https://github.com/%APPVEYOR_REPO_NAME%.git %APPVEYOR_BUILD_FOLDER%
+  - git checkout -qf %APPVEYOR_REPO_COMMIT%
+
+install:
+  - pacman -S --noconfirm --needed nasm yasm zlib-devel mingw-w64-cross-mingw32-gcc mingw-w64-cross-mingw64-gcc
+
+build_script:
+  - build.bat
