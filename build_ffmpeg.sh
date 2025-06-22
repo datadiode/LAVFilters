@@ -52,6 +52,7 @@ clean() (
 
 configure() (
   OPTIONS="
+    --disable-x86asm                \
     --enable-shared                 \
     --disable-static                \
     --enable-gpl                    \
