@@ -9,6 +9,8 @@ call "%VSInstallationPath%\Common7\Tools\VsDevCmd.bat" -no_logo -arch=x86 > NUL
 path
 where cl.exe
 where gcc.exe
+where nasm.exe
+where yasm.exe
 gcc --version
 
 REM sh build_ffmpeg.sh x86 || EXIT /B 1
