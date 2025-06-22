@@ -11,7 +11,7 @@ clone_script:
   - git checkout -qf %APPVEYOR_REPO_COMMIT%
 
 install:
-  - pacman -S --noconfirm --needed nasm yasm zlib-devel mingw-w64-cross-mingw32-gcc mingw-w64-cross-mingw64-gcc
+  - pacman -S --noconfirm --needed nasm yasm zlib-devel
 
 build_script:
   - build.bat
