@@ -11,7 +11,7 @@ clone_script:
   - git checkout -qf %APPVEYOR_REPO_COMMIT%
 
 install:
-  - pacman -S --noconfirm --needed nasm yasm mingw-w64-cross-gcc
+  - pacman -S --noconfirm --needed nasm yasm gnutls mingw-w64-cross-gcc
 
 build_script:
   - build.bat
