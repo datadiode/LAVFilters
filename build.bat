@@ -12,12 +12,13 @@ where gcc.exe
 where nasm.exe
 where yasm.exe
 gcc --version
+vcpkg install zlib
 
 REM sh build_ffmpeg.sh x86 || EXIT /B 1
 REM MSBuild.exe LAVFilters.sln /nologo /m /t:Rebuild /property:Configuration=Release;Platform=Win32
 REM IF ERRORLEVEL 1 EXIT /B 1
 
-sh build_ffmpeg.sh x64 || EXIT /B 1
+sh build_ffmpeg_msvc.sh x64 || EXIT /B 1
 MSBuild.exe LAVFilters.sln /nologo /m /t:Rebuild /property:Configuration=Release;Platform=x64
 IF ERRORLEVEL 1 EXIT /B 1
 
