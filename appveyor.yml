@@ -12,7 +12,7 @@ clone_script:
   - git checkout -qf %APPVEYOR_REPO_COMMIT%
 
 install:
-  - pacman -S --noconfirm --needed nasm yasm libgnutls-devel mingw-w64-dav1d mingw-w64-cross-gcc mingw-w64-x86_64-pkg-config
+  - pacman -S --noconfirm --needed nasm yasm libgnutls-devel mingw-w64-x86_64-dav1d mingw-w64-cross-gcc mingw-w64-x86_64-pkg-config
 
 build_script:
   - build.bat
