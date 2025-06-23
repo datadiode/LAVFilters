@@ -53,6 +53,7 @@ clean() (
 configure() (
   OPTIONS="
     --disable-x86asm                \
+	--x86asmexe=yasm.exe            \
     --enable-shared                 \
     --disable-static                \
     --enable-gpl                    \
@@ -77,7 +78,7 @@ configure() (
     --enable-bzlib                  \
     --enable-d3d11va                \
     --enable-dxva2                  \
-    --enable-gnutls                 \
+    --enable-schannel               \
     --enable-gmp                    \
     --enable-libdav1d               \
     --enable-libspeex               \
