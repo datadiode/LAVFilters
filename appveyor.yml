@@ -5,7 +5,7 @@ image: Visual Studio 2022
 
 environment:
   PATH: $(PATH);C:\msys64\mingw64\bin;C:\msys64\usr\bin;C:\msys64\opt\bin
-  PKG_CONFIG_PATH: /c/dev/build/install
+  PKG_CONFIG_PATH: /c/dev/build/install;C/msys64/mingw64/lib/pkgconfig
 
 clone_script:
   - git clone -q --recursive --branch=%APPVEYOR_REPO_BRANCH% https://github.com/%APPVEYOR_REPO_NAME%.git %APPVEYOR_BUILD_FOLDER%
